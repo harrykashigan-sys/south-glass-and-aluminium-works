@@ -1,0 +1,6 @@
+{
+  "name": "South Glass Residences & Luxury Suites Nairobi",
+  "description": "Ultra-luxury architectural glass serviced apartments and vacation suites on Muhoho Avenue & Five Star Road, Nairobi. Featuring panoramic skyline views, frameless balconies, and bespoke hospitality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

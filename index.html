@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Defensive shim for browser extensions/interceptors attempting to assign window.fetch
+      (function() {
+        try {
+          var _origFetch = window.fetch ? window.fetch.bind(window) : null;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _currentFetch || (window.Window && Window.prototype && Object.getOwnPropertyDescriptor(Window.prototype, 'fetch')?.get?.call(window));
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            }
+          });
+        } catch (e) {
+          try {
+            if (window.Window && Window.prototype) {
+              var desc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+              if (desc && !desc.set) {
+                var protoGet = desc.get;
+                var _storedFetch = null;
+                Object.defineProperty(Window.prototype, 'fetch', {
+                  configurable: true,
+                  enumerable: true,
+                  get: function() {
+                    return _storedFetch || (protoGet ? protoGet.call(this) : undefined);
+                  },
+                  set: function(v) {
+                    _storedFetch = v;
+                  }
+                });
+              }
+            }
+          } catch (e2) {}
+        }
+      })();
+    </script>
+    <title>South Glass and Aluminium Works on Residences | Nairobi Architectural Glazing &amp; Suites</title>
+    <meta name="description" content="South Glass and Aluminium Works specializes in custom residential glass, frameless balcony balustrades, fluted bathroom shower cubicles, acoustic windows, and showcase residences on Muhoho Avenue &amp; Five Star Road, Nairobi." />
+    <meta name="keywords" content="South Glass and Aluminium Works, residential glass works Nairobi, balcony glass Nairobi, bathroom shower glass Nairobi, acoustic windows Kenya, Muhoho Avenue residences, Five Star Road Airbnb, glass industry Nairobi" />
+    <meta name="author" content="South Glass &amp; Aluminium Works" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="South Glass and Aluminium Works on Residences | Nairobi Architectural Glazing" />
+    <meta property="og:description" content="Custom architectural glass, frameless balcony balustrades, bathroom showers, and living showcase residences on Muhoho Avenue &amp; Five Star Road, Nairobi." />
+    <meta property="og:site_name" content="South Glass &amp; Aluminium Works" />
+    <meta property="og:image" content="/src/assets/images/hero_luxury_penthouse_1793472398316.jpg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="South Glass and Aluminium Works on Residences" />
+    <meta name="twitter:description" content="Custom architectural glass, frameless balcony balustrades, bathroom showers, and living showcase residences on Muhoho Avenue &amp; Five Star Road, Nairobi." />
+    <meta name="twitter:image" content="/src/assets/images/hero_luxury_penthouse_1793472398316.jpg" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data (JSON-LD) for LocalBusiness & LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LodgingBusiness",
+          "@id": "https://southglassresidences.co.ke/#lodging",
+          "name": "South Glass Residences & Luxury Suites",
+          "alternateName": "South Glass & Aluminium Works - Hospitality Residences",
+          "description": "Architectural glass luxury serviced apartments and short-stay residences in Nairobi, featuring panoramic skyline views, frameless structural balconies, and personalized concierge.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Muhoho Avenue, Five Star Rd",
+            "addressLocality": "Nairobi",
+            "addressRegion": "Nairobi County",
+            "addressCountry": "KE",
+            "postalCode": "00100"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -1.3134,
+            "longitude": 36.8315
+          },
+          "hasMap": "https://maps.google.com/?q=MRGG+FR+Nairobi",
+          "telephone": "+254701770614",
+          "priceRange": "$$$$",
+          "openingHours": "Mo-Su 00:00-24:00",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Saajid Suleiman"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "reviewBody": "Great experience! I hired them to install glass on my balcony and in the bathrooms at my new place, and they did an excellent job. The work is clean, professional, and the finishing is top quality. Very reliable and easy to work with. Highly recommended!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "John Irungu"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "reviewBody": "Exquisite finishing, flawless execution, and unbelievable skyline ambiance."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Yunus Admani"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "reviewBody": "Top-tier craftsmanship and hospitality standard in Nairobi. Highly satisfied."
+            }
+          ],
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "High-Speed Starlink & Fibre Wi-Fi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "24/7 Full Power Solar & Inverter Backup",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Heated Rooftop Glass-Walled Infinity Pool",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Panoramic Floor-to-Ceiling Soundproof Balconies",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Smart Keyless Lock Entry & 24/7 Security",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-stone-950 text-stone-100 antialiased selection:bg-amber-500/20 selection:text-amber-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
